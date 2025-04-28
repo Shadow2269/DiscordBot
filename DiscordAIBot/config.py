@@ -1,6 +1,0 @@
-# config.py
-DISCORD_TOKEN = "MTM2NTMzNjcyMDkzMjk5OTE3OA.GNSkTl.KfyTRO1O615DDx8L1vmeCWmgbGH3SAHAzM08c4"
-OPENAI_API_KEY = "sk-AFp6mt37y4vALidL690Pvx2KWuydTKRh1y2_f2AeZiT3BlbkFJxOSfplEMu6ugBbk9aLmvWh2aSX427vTGyY_RLZG3AA"
-# config.py
-OWNER_ID = 738478522850607154 # <- deine echte ID hier eintragen
-
