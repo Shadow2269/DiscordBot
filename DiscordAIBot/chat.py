@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 HF_API_KEY = os.getenv("HF_API_KEY")
 
-# Dein HuggingFace Modell
-MODEL = "google/flan-t5-small"  # Einfaches Modell (du kannst es später upgraden)
+# HuggingFace Modell
+MODEL = "google/flan-t5-small"  
 
 # Persönlichkeit des Bots
 system_prompt = (
@@ -18,7 +18,7 @@ system_prompt = (
 # Speicherdatei
 memory_file = "memory.json"
 
-# Lade alte Konversationen
+# alte Konversationen
 def load_memory():
     try:
         with open(memory_file, "r") as f:
@@ -44,12 +44,12 @@ def get_bot_response(user_message):
     )
 
     if response.status_code != 200:
-        return "❌ Fehler bei der Anfrage."
+        return "Fehler bei der Anfrage."
 
     generated_text = response.json()
     try:
         output = generated_text[0]["generated_text"].split("Bot:")[-1].strip()
         return output
     except (KeyError, IndexError):
-        return "❌ Konnte keine Antwort generieren."
+        return "Konnte keine Antwort generieren."
 
